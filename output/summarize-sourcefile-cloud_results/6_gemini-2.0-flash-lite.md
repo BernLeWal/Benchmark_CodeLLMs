@@ -1,0 +1,5 @@
+*   **Programming Language:** Java.
+*   **Frameworks:** Spring Boot.
+*   **Functionality:** A RESTful API for managing weather data. It provides endpoints for retrieving weather records by ID (`/city/{id}`), retrieving all records (`/city`), adding new records (`/city/add`), updating records (`/city/update/{id}`), and deleting records (`/city/delete/{id}`). The application uses an in-memory `HashMap` as a data store.
+*   **Usage:**  To run the application, execute the `main` method.  The API can then be accessed via HTTP requests to the specified endpoints. For example, a GET request to `/city/1` would retrieve the weather data for city ID 1. POST, PUT and DELETE requests are available at the specified endpoints.
+*   **Quality and Functionality:** 75. The code demonstrates basic CRUD (Create, Read, Update, Delete) operations for weather data. It's well-structured and utilizes Spring Boot annotations effectively. However, the use of an in-memory `HashMap` makes it unsuitable for production environments, as data will be lost on application restart.  Error handling is present but could be expanded. Data validation is missing.
