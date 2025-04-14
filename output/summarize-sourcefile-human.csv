@@ -1,0 +1,5 @@
+nr;sourcefile;label;cfg_model;cfg_temperature;cfg_top_p;cfg_f_penalty;cfg_p_penalty;run_timestamp;run_duration_sec;result_status;result_file;result_length;total_duration_sec;total_iterations;total_prompt_tokens;total_completion_tokens;total_tokens;total_prompt_chars;total_completion_chars;total_chars;score_result_length;score_result_facts;grade;true_facts;false_facts
+1;summarize-sourcefile_a.wf.md;HUMAN;lecturer-1;;;;;2025-04-14 09:00:00;120;SUCCESS;1_lecturer-1.md;355;60;1;;;;;;;;;90;
+2;summarize-sourcefile_b.wf.md;HUMAN;lecturer-1;;;;;2025-04-14 10:00:00;180;SUCCESS;2_lecturer-1.md;534;90;1;;;;;;;;;70;
+3;summarize-sourcefile_d.wf.md;HUMAN;lecturer-1;;;;;2025-04-14 11:00:00;360;SUCCESS;3_lecturer-1.md;579;180;1;;;;;;;;;40;
+4;summarize-sourcefile_e.wf.md;HUMAN;lecturer-1;;;;;2025-04-14 12:00:00;240;SUCCESS;4_lecturer-1.md;507;120;1;;;;;;;;;20;
