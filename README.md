@@ -23,7 +23,7 @@ Different solutions from A-graded to E-graded have been prepared:
 - [summarize-sourcefile_d](./input/summarize-sourcefile_d.wf.md) - a lecturer would grade it "D" (a lot of semantic errors and code flaws)
 - [summarize-sourcefile_e](./input/summarize-sourcefile_e.wf.md) - a lecturer would grade it "E" - FAILED! (incomplete, does not compile, not understood RESTful services, not understood Spring Framework)
 
-### Evaluated LLMs
+### Evaluated cloud-based LLMs
 
 The following **cloud-based LLMs** have been included in the benchmark tests:
 
@@ -51,15 +51,22 @@ Anthropic:
 - "claude-3-7-sonnet-latest",
 - "claude-3-5-sonnet-latest"
 
-As alternative benchmarks were done with the following, **locally executed LLMs**:
+### Evaluated locally-executed LLMs
 
+As alternative benchmarks were done with the following LLMs:
+
+7B Models (the maximum size working on my machine):
 - "codellama/CodeLlama-7b-Instruct-hf",
 - "Qwen/Qwen2.5-Coder-7B-Instruct",
-- "microsoft/Phi-4-mini-instruct",
 - "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
-- "deepseek-ai/deepseek-coder-7b-instruct-v1.5"
+- "deepseek-ai/deepseek-coder-7b-instruct-v1.5",
+- "bigcode/starcoder2-7b" (was tested, but failed to work),
 
-As computer I used a consumer PC with a RTC 2080 Ti card with 11GB VRAM. 
+3B/4B Models:
+- "Qwen/Qwen2.5-Coder-3B-Instruct",
+- "microsoft/Phi-4-mini-instruct",
+
+As computer I used a consumer PC with a Nvidia RTX 2080 Ti card with 11GB VRAM. 
 So the testfield was limited to not more than 8B models.
 
 ### Benchmark Execution
