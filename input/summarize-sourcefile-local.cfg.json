@@ -11,7 +11,12 @@
     "key_values": {},
     "repeats": 1,
     "ai_model_names": [
+        "codellama/CodeLlama-7b-Instruct-hf",
+        "Qwen/Qwen2.5-Coder-7B-Instruct",
+        "microsoft/Phi-4-mini-instruct",
+        "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
         "deepseek-ai/deepseek-coder-7b-instruct-v1.5"
+
     ],
     "ai_temperature_values": null,
     "ai_top_p_values": null,

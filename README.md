@@ -25,7 +25,7 @@ Different solutions from A-graded to E-graded have been prepared:
 
 ### Evaluated LLMs
 
-The following cloud-based LLMs have been included in the benchmark tests:
+The following **cloud-based LLMs** have been included in the benchmark tests:
 
 OpenAI:
 - "gpt-4o-mini",
@@ -51,7 +51,16 @@ Anthropic:
 - "claude-3-7-sonnet-latest",
 - "claude-3-5-sonnet-latest"
 
-Remarks: Currently also small local-running, and on coding specialiced LLMs are tested. So more results to come soon :-)
+As alternative benchmarks were done with the following, **locally executed LLMs**:
+
+- "codellama/CodeLlama-7b-Instruct-hf",
+- "Qwen/Qwen2.5-Coder-7B-Instruct",
+- "microsoft/Phi-4-mini-instruct",
+- "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+- "deepseek-ai/deepseek-coder-7b-instruct-v1.5"
+
+As computer I used a consumer PC with a RTC 2080 Ti card with 11GB VRAM. 
+So the testfield was limited to not more than 8B models.
 
 ### Benchmark Execution
 
@@ -59,30 +68,48 @@ The benchmarks were executed with [AICodeMentor](https://github.com/BernLeWal/AI
 
 The performance and results have been measured and stored in the [/output](./output/) subfolder, find the CSVs and LLMs outputs (as .md files) there:
 - [summarize-sourcefile-cloud.csv](./output/summarize-sourcefile-cloud.csv)
-    - Find the LLMs full-text output each in the subfolder [output/summarize-sourcefile-cloud_results/](./output/summarize-sourcefile-cloud_results/)
+    - Find the cloud-based LLMs full-text output each in the subfolder [output/summarize-sourcefile-cloud_results/](./output/summarize-sourcefile-cloud_results/)
+- [summarize-sourcefile-local.csv](./output/summarize-sourcefile-local.csv)
+    - Find the locally running LLMs full-text output each in the subfolder [output/summarize-sourcefile-local_results/](./output/summarize-sourcefile-local_results/)
 - [summarize-sourcefile-human.csv](./output/summarize-sourcefile-human.csv)
-    - Find the LLMs full-text output each in the subfolder [output/summarize-sourcefile-cloud_results/](./output/summarize-sourcefile-human_results/)
+    - Find the lecturers full-text output each in the subfolder [output/summarize-sourcefile-human_results/](./output/summarize-sourcefile-human_results/)
 
 ## Analytics
 
 The analytics and diagrams are done using Jupyter-Notebooks:
 - Analyze how the LLMs would grade (from 0..100) the exercise-samples: [analyze_grade.ipynb](analyze_grade.ipynb)
 
-... more to come soon ;-)
+... more analytics to come soon ;-)
 
 ## Results
 
 ### Grades per Sourcefile (grouped by submission-category)
 
-![docs/images/summarize-sourcefile_grades_scatter-plot.png](./docs/images/summarize-sourcefile_grades_scatter-plot.png)
-
 The grading results of a human lecturer are contained in the graphics, shown in red color and labeled as "lecturer-1".
+
+* Cloud-based (very large) LLMs:
+
+![docs/images/summarize-sourcefile-cloud_grades_scatter-plot.png](./docs/images/summarize-sourcefile-cloud_grades_scatter-plot.png)
+
+* Locally-running (small, but very specialized) LLMs:
+
+![docs/images/summarize-sourcefile-local_grades_scatter-plot.png](./docs/images/summarize-sourcefile-local_grades_scatter-plot.png)
+
+Compared to the cloud-based LLMs the results of the locally executed LLMs are more widespred and less related to the lecturer results. 
+But "Qwen/Qwen2.5-Coder-7B-Instruct" showed in all samples the same quality as the majority of cloud-based LLMs and would be an interesting alternative.
 
 ### Grade distribution per Sourcefile (Boxplot with HUMAN Results highlighted)
 
-![docs/images/summarize-sourcefile_grades_box-plot.png](./docs/images/summarize-sourcefile_grades_box-plot.png)
-
 The grading results of a human lecturer are contained in the graphics, shown by the red diamonds.
+
+* Cloud-based (very large) LLMs:
+
+![docs/images/summarize-sourcefile-cloud_grades_box-plot.png](./docs/images/summarize-sourcefile-cloud_grades_box-plot.png)
+
+* Locally-running (small, but very specialized) LLMs:
+
+![docs/images/summarize-sourcefile-local_grades_box-plot.png](./docs/images/summarize-sourcefile-local_grades_box-plot.png)
+
 
 ### Conclusion
 
